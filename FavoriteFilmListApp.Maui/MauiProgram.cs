@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using FavoriteFilmListApp.Maui.Services;
+using FavoriteFilmListApp.Maui.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace FavoriteFilmListApp.Maui
 {
@@ -18,6 +20,10 @@ namespace FavoriteFilmListApp.Maui
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<MovieService>();
+            builder.Services.AddSingleton<MovieListViewModel>();
+            builder.Services.AddSingleton<MainPage>();
 
             return builder.Build();
         }
