@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FavoriteFilmListApp.Maui.Views.MovieDetailsPage"
+             xmlns:vm="clr-namespace:FavoriteFilmListApp.Maui.ViewModels"
+             x:DataType="vm:MovieDetailsViewModel"
+             Title="{Binding Movie.Name}">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="Auto ,60,Auto" Margin="5" VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Label 
+            Text="{Binding Movie.Name }"
+            VerticalOptions="Center" 
+
+            HorizontalOptions="Center" 
+            FontSize="25"
+            FontAttributes="Bold" Grid.Column="0" WidthRequest="100"/>
+            <Label 
+            Text="{Binding Movie.ImdbRate }"
+            VerticalOptions="Center" 
+            TextColor="DarkGoldenrod"
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Italic" Grid.Column="1" WidthRequest="100"/>
+            <Label 
+            Text="{Binding Movie.CreatedYear.Year }"
+            VerticalOptions="Center" 
+
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Bold" Grid.Column="2" WidthRequest="100"/>
+
+
+        </Grid>
+        <Grid ColumnDefinitions="Auto ,60,Auto" Margin="5" VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Label 
+            Text="{Binding Movie.KindOfMovie }"
+            VerticalOptions="Center" 
+TextColor="Blue"
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Italic" Grid.Column="0" WidthRequest="100"/>
+            <Label 
+            Text="{Binding Movie.TotalSeasonNumber }"
+            VerticalOptions="Center" 
+TextColor="Blue"
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Italic" Grid.Column="1" WidthRequest="100"/>
+            <Label 
+            Text="{Binding Movie.WatchedSeason }"
+            VerticalOptions="Center" 
+TextColor="Blue"
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Italic" Grid.Column="2" WidthRequest="100"/>
+
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
